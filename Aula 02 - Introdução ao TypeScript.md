@@ -122,11 +122,12 @@ Exemplo de `tsconfig.json`:
 ```json
 {
   "compilerOptions": {
-    "target": "ES6",        
-    "module": "commonjs",   
-    "strict": true,         
-    "outDir": "./dist",     
-    "rootDir": "./src"
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "module": "nodenext",
+    "target": "esnext",
+    "strict": true,
+    "esModuleInterop": true
   }
 }
 ```
