@@ -128,7 +128,9 @@ Exemplo de `tsconfig.json`:
     "target": "esnext",
     "strict": true,
     "esModuleInterop": true
-  }
+  },
+  "include": ["./src/**/*.ts"],
+  "exclude": ["./node_modules", "./dist"]
 }
 ```
 
