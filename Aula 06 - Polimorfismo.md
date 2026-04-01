@@ -76,45 +76,6 @@ console.log(calc.somar("Oi, ", "Daniel")); // "Oi, Daniel"
 
 ---
 
-### 3️⃣ Polimorfismo por Interface
-
-* Quando diferentes classes implementam a **mesma interface**, mas cada uma dá sua própria implementação.
-
-* Em **Star Wars**, todos os Jedi usam a **Força**, mas cada um manifesta de formas diferentes:
-
-  * Yoda levanta uma nave 🚀
-  * Obi-Wan usa para influenciar mentes 🧠
-  * Anakin... bem, ele usa para destruir jovens padawans 😬
-
-```ts
-interface Lutador {
-  nome: string;
-  lutar(): void;
-}
-
-class Jedi implements Lutador {
-  constructor(public nome: string) {}
-  lutar(): void {
-    console.log(`${this.nome} luta com sabre de luz 🔵`);
-  }
-}
-
-class Sith implements Lutador {
-  constructor(public nome: string) {}
-  lutar(): void {
-    console.log(`${this.nome} luta com sabre vermelho 🔴`);
-  }
-}
-
-const luke = new Jedi("Luke");
-const vader = new Sith("Vader");
-
-luke.lutar();  // sabre azul
-vader.lutar(); // sabre vermelho
-```
-
----
-
 ## 🌟 Vantagens do Polimorfismo
 
 * **Reuso de código**: você chama o mesmo método, mas ele se adapta.
@@ -137,7 +98,3 @@ vader.lutar(); // sabre vermelho
 1. Crie uma classe `Animal` com o método `falar()`.
 
    * Faça subclasses (`Cachorro`, `Gato`, `Pássaro`) que sobrescrevem o método de forma diferente.
-2. Crie uma interface `Instrumento` com o método `tocar()`.
-
-   * Implemente em classes (`Guitarra`, `Bateria`, `Flauta`) que tocam sons diferentes.
-3. Simule sobrecarga criando uma classe `Mensagem` com o método `enviar()`, que pode receber **string** ou **número** (id de usuário).
